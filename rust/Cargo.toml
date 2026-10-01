@@ -1,0 +1,17 @@
+[package]
+name = "modloader-abi"
+version = "1.0.0"
+edition = "2024"
+license = "MIT"
+description = "Rust bindings to the ModLoader C ABI"
+repository = "https://github.com/ModLoader64/ModLoader-ABI"
+publish = false
+
+[features]
+default = []
+adapter = []
+module = []
+n64 = []
+
+[build-dependencies]
+bindgen = "0.73"
