@@ -20,12 +20,4 @@ struct Memory_View {
     bool wordSwapped = false;
 };
 
-struct Patch_Memory {
-    void* context = nullptr;
-    bool (*read)(void* context, u32 address, void* bytes, u32 size) = nullptr;
-    bool (*write)(void* context, u32 address, const void* bytes, u32 size) = nullptr;
-    u32 (*allocate)(void* context, u32 size, u32 alignment) = nullptr;
-    void (*release)(void* context, u32 address) = nullptr;
-};
-
 } // namespace N64

@@ -163,6 +163,10 @@ size_t Disassembler::Format(char* out, size_t capacity) const {
 
 Instruction_Info Disassembler::Analyze() const {
     Instruction_Info info = {};
+    if (Find_Instruction(word) == nullptr) {
+        info.control = Control_Other;
+        return info;
+    }
     Opcode opcode = static_cast<Opcode>(word >> 26);
     u32 target_register = (word >> 16) & 31;
 

@@ -67,6 +67,8 @@ fn main() {
         for header in [
             "modloader_module_exports.h",
             "modloader_lobby.h",
+            "modloader_net.h",
+            "modloader_service.h",
             "modloader_rml.h",
             "modloader_libc.h",
         ] {
@@ -84,7 +86,6 @@ fn main() {
         for header in [
             "n64/modloader_n64_adapter.h",
             "n64/modloader_n64_module.h",
-            "n64/modloader_n64_patch.h",
         ] {
             n64 = n64.header(include.join(header).to_string_lossy());
         }

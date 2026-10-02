@@ -20,8 +20,16 @@ typedef enum ModLoader_Event {
     MODLOADER_EVENT_UI = 0x82,
     MODLOADER_EVENT_IMAGE_RESIZED = 0x83,
     MODLOADER_EVENT_SETTING = 0x84,
+    MODLOADER_EVENT_NET = 0x85,
+    MODLOADER_EVENT_SERVICE = 0x86,
     MODLOADER_EVENT_PLATFORM = 0x100,
 } ModLoader_Event;
+
+typedef enum ModLoader_Event_Phase {
+    MODLOADER_EVENT_PHASE_PRE = 0,
+    MODLOADER_EVENT_PHASE_NORMAL = 1,
+    MODLOADER_EVENT_PHASE_POST = 2,
+} ModLoader_Event_Phase;
 
 typedef enum ModLoader_Clock {
     MODLOADER_CLOCK_MILLISECONDS = 0,

@@ -48,6 +48,7 @@ typedef struct ModLoader_Server_Record {
     ModLoader_Lobby_Member member;
     char lobbyName[72]; // at most 64 bytes
     char topic[72]; // at most 64 bytes
+    uint8_t publicKey[32]; // never sent to other clients
 } ModLoader_Server_Record;
 
 typedef enum ModLoader_Lobby_State {

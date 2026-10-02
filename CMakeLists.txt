@@ -16,8 +16,6 @@ add_library(modloader_n64_tools STATIC EXCLUDE_FROM_ALL
     src/n64/assembler.cpp
     src/n64/disassembler.cpp
     src/n64/opcodes.cpp
-    src/n64/patch.cpp
-    src/n64/relocate.cpp
     src/n64/signature.cpp
 )
 
