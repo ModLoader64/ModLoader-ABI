@@ -57,6 +57,7 @@ fn main() {
         "modloader_platform.h",
         "modloader_settings.h",
         "modloader_video.h",
+        "modloader_texture.h",
     ] {
         common = common.header(include.join(header).to_string_lossy());
     }

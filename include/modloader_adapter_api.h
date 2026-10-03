@@ -6,6 +6,7 @@
 #include "modloader_platform.h"
 #include "modloader_settings.h"
 #include "modloader_video.h"
+#include "modloader_texture.h"
 #include <stdint.h>
 
 #if defined(__cplusplus)
@@ -63,6 +64,7 @@ typedef struct ModLoader_Platform_Adapter {
     uint64_t (*pokeMemory)(void* adapter, uint32_t processor, uint64_t address, const uint8_t* data, uint64_t size);
     int32_t (*reset)(void* adapter);
     int64_t (*platformCall)(void* adapter, uint32_t operation, const void* request, uint64_t requestSize, void* response, uint64_t responseCapacity);
+    int32_t (*setTextureSources)(void* adapter, const char* const* paths, uint32_t count, uint32_t flags);
 } ModLoader_Platform_Adapter;
 
 typedef const ModLoader_Platform_Adapter* (*ModLoader_Get_Platform_Adapter_Function)(void);
