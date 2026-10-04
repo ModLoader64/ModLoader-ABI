@@ -1,6 +1,14 @@
 // Client and module layouts must match.
 #pragma once
 
+#include <stdint.h>
+
+enum class ModLoader_ImGui_Font_Kind : uint32_t {
+    Default = 0,
+    Vector = 1,
+    Bitmap = 2,
+};
+
 #define ImDrawIdx unsigned int
 #define IMGUI_DISABLE_OBSOLETE_FUNCTIONS
 

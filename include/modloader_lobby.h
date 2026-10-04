@@ -52,7 +52,7 @@ typedef struct ModLoader_Server_Record {
 } ModLoader_Server_Record;
 
 typedef enum ModLoader_Lobby_State {
-    MODLOADER_LOBBY_STATUS_OFFLINE = 0,
+    MODLOADER_LOBBY_STATUS_DISCONNECTED = 0,
     MODLOADER_LOBBY_STATUS_CONNECTING = 1,
     MODLOADER_LOBBY_STATUS_JOINED = 2,
     MODLOADER_LOBBY_STATUS_FAILED = 3,
