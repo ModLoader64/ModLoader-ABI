@@ -69,7 +69,6 @@ fn main() {
             "modloader_module_exports.h",
             "modloader_lobby.h",
             "modloader_net.h",
-            "modloader_service.h",
             "modloader_rml.h",
             "modloader_libc.h",
         ] {

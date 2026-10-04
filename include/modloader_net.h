@@ -6,6 +6,16 @@
 extern "C" {
 #endif
 
+typedef enum ModLoader_Net_Transport {
+    MODLOADER_NET_TCP = 0,
+    MODLOADER_NET_UDP = 1,
+} ModLoader_Net_Transport;
+
+enum {
+    MODLOADER_NET_MAX_DATAGRAM_SIZE = 65507,
+    MODLOADER_LOBBY_MAX_UDP_MESSAGE = 60 * 1024,
+};
+
 typedef enum ModLoader_Net_Event_Kind {
     MODLOADER_NET_PACKET = 1,
     MODLOADER_NET_ACCEPTED = 2,
@@ -22,7 +32,8 @@ typedef struct ModLoader_Net_Record {
     uint32_t version;
     uint64_t size;
     char type[65];
-    uint8_t reserved[7];
+    uint8_t reserved[3];
+    uint32_t transport;
     // payload follows
 } ModLoader_Net_Record;
 

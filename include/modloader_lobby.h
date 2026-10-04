@@ -1,6 +1,6 @@
 #pragma once
 
-#include "modloader_events.h"
+#include "modloader_net.h"
 #include <stdint.h>
 
 #if defined(__cplusplus)
@@ -25,6 +25,8 @@ typedef struct ModLoader_Lobby_Record {
     ModLoader_Event_Header header;
     uint32_t kind;
     uint32_t sealed;
+    uint32_t transport;
+    uint32_t reserved;
     uint64_t size;
     ModLoader_Lobby_Member member;
     char topic[72]; // at most 64 bytes
@@ -44,7 +46,7 @@ typedef struct ModLoader_Server_Record {
     uint32_t lobby;
     uint64_t size;
     uint32_t sealed;
-    uint32_t reserved;
+    uint32_t transport;
     ModLoader_Lobby_Member member;
     char lobbyName[72]; // at most 64 bytes
     char topic[72]; // at most 64 bytes

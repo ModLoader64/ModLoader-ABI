@@ -9,6 +9,5 @@
 #include "modloader_module_exports.h"
 #include "modloader_lobby.h"
 #include "modloader_net.h"
-#include "modloader_service.h"
 #include "modloader_rml.h"
 #include "modloader_texture.h"
