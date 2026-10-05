@@ -20,6 +20,7 @@ typedef enum ModLoader_Setting_Flags {
     MODLOADER_SETTING_RESTART = 1u << 0,
     MODLOADER_SETTING_HIDDEN = 1u << 1,
     MODLOADER_SETTING_SPEED_LIMIT = 1u << 2,
+    MODLOADER_SETTING_DISABLED = 1u << 3,
 } ModLoader_Setting_Flags;
 
 typedef struct ModLoader_Setting {
