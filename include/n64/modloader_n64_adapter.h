@@ -8,6 +8,7 @@ extern "C" {
 
 typedef enum ModLoader_N64_Event {
     MODLOADER_EVENT_N64_RSP_TASK = MODLOADER_EVENT_PLATFORM,
+    MODLOADER_EVENT_N64_START, // IPL complete, before the first game instruction
 } ModLoader_N64_Event;
 
 typedef enum ModLoader_N64_Processor {
