@@ -98,8 +98,6 @@ const Opcode_Entry gOpcodes[] = {
     { "or", Special(Special_Function::Or), gSpecialMask | 0x7C0, Format_D_S_T },
     { "xor", Special(Special_Function::Xor), gSpecialMask | 0x7C0, Format_D_S_T },
     { "nor", Special(Special_Function::Nor), gSpecialMask | 0x7C0, Format_D_S_T },
-    { "hypercall", Special(Special_Function::Hypercall), gSpecialMask, Format_Hypercall },
-    { "hypercallr", Special(Special_Function::Hypercallr), 0xFC1FFFFF, Format_S },
     { "slt", Special(Special_Function::Slt), gSpecialMask | 0x7C0, Format_D_S_T },
     { "sltu", Special(Special_Function::Sltu), gSpecialMask | 0x7C0, Format_D_S_T },
     { "dadd", Special(Special_Function::Dadd), gSpecialMask | 0x7C0, Format_D_S_T },

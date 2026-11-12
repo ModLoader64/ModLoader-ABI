@@ -31,7 +31,6 @@ enum Operand_Format : u8 {
     Format_Fd_Fs,
     Format_Fs_Ft,
     Format_S_Immediate,
-    Format_Hypercall,
 };
 
 struct Opcode_Entry {

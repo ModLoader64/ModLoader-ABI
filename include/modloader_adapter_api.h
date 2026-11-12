@@ -18,7 +18,6 @@ extern "C" {
 typedef struct ModLoader_Host_Callbacks {
     void* host;
     void (*event)(void* host, uint32_t event, uint64_t time, const void* data, uint64_t size);
-    int32_t (*hypercall)(void* host, uint32_t processor, uint32_t hypercall_id, void* state, uint64_t size);
     void (*log)(void* host, uint32_t level, const char* message);
     void (*presentFrame)(void* host, const ModLoader_Frame* frame);
     void (*pushAudio)(void* host, const int16_t* samples, uint32_t frame_count, uint32_t sample_rate);

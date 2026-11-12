@@ -814,16 +814,6 @@ u32 Encode(Assembly_State* assembler, const Opcode_Entry* entry, Text_Span* oper
             word |= (Operand_Gpr(assembler, operands[0]) << 21) | (static_cast<u32>(value) & 0xFFFF);
         }
         break;
-    case Format_Hypercall:
-        if (expect(1)) {
-            s64 value = Operand_Value(assembler, operands[0]);
-
-            if (assembler->finalPass && (value < 0 || value > 0xFFFFF)) {
-                Fail(assembler, "hypercall IDs have 20 bits");
-            }
-            word |= (static_cast<u32>(value) & 0xFFFFF) << 6;
-        }
-        break;
     }
     return word;
 }

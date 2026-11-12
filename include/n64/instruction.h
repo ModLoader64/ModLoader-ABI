@@ -94,8 +94,6 @@ enum class Special_Function : u32 {
     Or = 0x25,
     Xor = 0x26,
     Nor = 0x27,
-    Hypercall = 0x28,
-    Hypercallr = 0x29,
     Slt = 0x2A,
     Sltu = 0x2B,
     Dadd = 0x2C,
@@ -183,11 +181,6 @@ constexpr u32 Encode_Jump(u32 target) {
 
 constexpr u32 Encode_Jump_Link(u32 target) {
     return (static_cast<u32>(Opcode::Jal) << 26) | ((target >> 2) & 0x3FFFFFF);
-}
-
-// SPECIAL funct 0x28; 0x29 is hypercallr rs.
-constexpr u32 Encode_Hypercall(u32 id) {
-    return ((id & 0xFFFFF) << 6) | static_cast<u32>(Special_Function::Hypercall);
 }
 
 constexpr u32 gNop = 0x00000000;

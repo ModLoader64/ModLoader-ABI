@@ -133,8 +133,6 @@ size_t Disassembler::Format(char* out, size_t capacity) const {
         if (((word >> 6) & 0xFFFFF) == 0) {
             break;
         }
-        [[fallthrough]];
-    case Format_Hypercall:
         snprintf(operands, sizeof(operands), "0x%X", (word >> 6) & 0xFFFFF);
         break;
     case Format_T_Cop0:

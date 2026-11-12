@@ -23,7 +23,7 @@ typedef struct ModLoader_N64_Cpu_State {
     uint64_t gpr[32]; // writes to gpr[0] are ignored
     uint64_t hi;
     uint64_t lo;
-    uint64_t pc; // unchanged hypercall PC resumes at pc + 4
+    uint64_t pc;
     uint64_t fpr[32]; // FR=0: f(2n + 1) is the high half of fpr[2n]
     uint32_t fcr31;
     // these are read-only
